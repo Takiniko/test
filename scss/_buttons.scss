@@ -1,0 +1,17 @@
+.button{
+	color: #090909;
+	font-weight: 700;
+	line-height: 20px;
+	padding: 26px 38px;
+	border-radius:10px ;
+	margin-top: 110px;
+
+	&_clr_white{
+		background-color: #fff;
+		border: 1px solid #F0ECE8;
+	}
+	&_clr_orange{
+		background-color: #FF9C08;
+		border: none;
+	}
+}
