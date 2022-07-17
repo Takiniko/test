@@ -1,20 +1,94 @@
-@import "_container";
-@import "_header";
-@import "_buttons";
-
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
 @import url(https://fonts.googleapis.com/css?family=DM+Sans:regular,italic,500,500italic,700,700italic);
+
+@import "_reset";
 
 
 h1, h2, h3, h4{
 	font-family: 'Roboto', Arial, sans-serif;
+	font-weight: 700;
 }
 
 body{
 	font-family: 'DM Sans';
+	color: #090909;
 }
 
 a, p{
 	font-size: 18px;
+	color: #090909;
 }
 
+.title::before{
+	top: -20px;
+			position: absolute;
+			content: '';
+			display: block;
+			height: 4px;
+			width:140px;
+			background: #FF9C08;
+}
+
+.title{
+	font-size: 42px;
+	line-height: 58px;
+}
+
+.text{
+	font-size: 18px;
+	line-height: 30px;
+	color: #6E6E6E;
+}
+
+.row{
+	display: flex;
+}
+.column{
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	flex-basis: 50%;
+}
+.banner {
+	padding-bottom: 210px;
+	&__title {
+		font-size: 60px;
+		line-height: 80px;
+		font-weight: 700;
+		margin-top: 237px;
+		margin-bottom: 16px;
+		&::before {
+			top:208px;
+			position: absolute;
+			content: '';
+			display: block;
+			height: 4px;
+			width:140px;
+			background: #FF9C08;
+		}
+	}
+
+	&__text {
+		font-size: 24px;
+		line-height: 38px;
+		color: #6E6E6E;
+		margin: 0;
+		margin-bottom: 43px;
+	}
+
+	&__img {
+		position: absolute;
+		right: -110px;
+		height: 870px;
+		width: auto;
+	}
+
+	&__button{
+		margin-right: 28px;
+	}
+}
+
+@import "_container";
+@import "_header";
+@import "_buttons";
+@import "_about";

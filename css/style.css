@@ -1,8 +1,174 @@
+@charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
 @import url(https://fonts.googleapis.com/css?family=DM+Sans:regular,italic,500,500italic,700,700italic);
-.container {
-  padding: 0 15px;
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+/* Убираем внутренние отступы */
+ul,
+ol {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul,
+ol {
+  list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+h1, h2, h3, h4 {
+  font-family: "Roboto", Arial, sans-serif;
+  font-weight: 700;
+}
+
+body {
+  font-family: "DM Sans";
+  color: #090909;
+}
+
+a, p {
+  font-size: 18px;
+  color: #090909;
+}
+
+.title::before {
+  top: -20px;
+  position: absolute;
+  content: "";
+  display: block;
+  height: 4px;
+  width: 140px;
+  background: #FF9C08;
+}
+
+.title {
+  font-size: 42px;
+  line-height: 58px;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 30px;
+  color: #6E6E6E;
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  flex-basis: 50%;
+}
+
+.banner {
+  padding-bottom: 210px;
+}
+.banner__title {
+  font-size: 60px;
+  line-height: 80px;
+  font-weight: 700;
+  margin-top: 237px;
+  margin-bottom: 16px;
+}
+.banner__title::before {
+  top: 208px;
+  position: absolute;
+  content: "";
+  display: block;
+  height: 4px;
+  width: 140px;
+  background: #FF9C08;
+}
+.banner__text {
+  font-size: 24px;
+  line-height: 38px;
+  color: #6E6E6E;
+  margin: 0;
+  margin-bottom: 43px;
+}
+.banner__img {
+  position: absolute;
+  right: -110px;
+  height: 870px;
+  width: auto;
+}
+.banner__button {
+  margin-right: 28px;
+}
+
 @media (min-width: 575.98px) {
   .container {
     max-width: 540px;
@@ -22,41 +188,116 @@
 }
 @media (min-width: 1199.98px) {
   .container {
-    max-width: 1140px;
+    max-width: 1220px;
   }
 }
 
 .header {
+  position: relative;
+  display: block;
   background-color: #fff;
+  border-bottom: 1px solid #F0ECE8;
 }
 .header__logo {
-  width: 100px;
+  float: left;
+  width: 200px;
 }
+.header__inner {
+  align-items: center;
+  height: 119px;
+  box-sizing: border-box;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.nav__list {
+  float: left;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin-left: 40px;
+}
+.nav__item {
+  margin-left: 26px;
+}
+.nav__link {
+  font-size: 17px;
+}
+
 .button {
-  color: #090909;
+  display: inline-block;
   font-weight: 700;
   line-height: 20px;
   padding: 26px 38px;
   border-radius: 10px;
-  margin-top: 110px;
 }
 .button_clr_white {
   background-color: #fff;
   border: 1px solid #F0ECE8;
+  padding: 25px 38px;
 }
 .button_clr_orange {
   background-color: #FF9C08;
-  border: none;
+}
+.button_nav {
+  float: right;
+  font-size: 16px;
+  line-height: 18px;
+  background-color: #FF9C08;
+  padding: 18px 24px;
 }
 
-h1, h2, h3, h4 {
-  font-family: "Roboto", Arial, sans-serif;
+.about-us {
+  background-color: #FEF9F2;
 }
-
-body {
-  font-family: "DM Sans";
+.about-us__list {
+  padding-top: 135px;
+  padding-bottom: 73px;
+  border-bottom: 1px solid #DAD1CA;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
 }
-
-a, p {
-  font-size: 18px;
+.about-us__item {
+  text-align: center;
+}
+.about-us__item-numbers {
+  font-size: 60px;
+  line-height: 80px;
+  font-weight: 700;
+}
+.about-us__item-numbers span {
+  color: #FF9C08;
+}
+.about-us__item-text {
+  font-size: 20px;
+  line-height: 22px;
+  color: #6E6E6E;
+}
+.about-us__row {
+  padding-top: 240px;
+}
+.about-us__title {
+  margin-bottom: 17px;
+}
+.about-us__text {
+  margin-bottom: 52px;
+}
+.about-us__img {
+  width: 596px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 32px;
+}
+.about-us__buttons .button {
+  margin-left: 28px;
+  margin-bottom: 64px;
+}
+.about-us__column1 {
+  padding-right: 14px;
+}
+.about-us__column2 {
+  align-items: flex-end;
+  padding-left: 26px;
 }

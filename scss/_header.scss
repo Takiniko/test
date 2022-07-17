@@ -1,14 +1,39 @@
 
 .header {
+	position: relative;
+	display: block;
 	background-color: #fff;
-	// .header__logo
+	border-bottom:1px solid #F0ECE8 ;
 
 	&__logo {
-		width: 100px;
+		float: left;
+		width: 200px;
 	}
 
-	// .header__menu
+	&__inner{
+		align-items: center;
+		height: 119px;
+		box-sizing: border-box;
+		display: flex;
+		margin: 0 auto;
+		justify-content: space-between;
+	}
+}
 
-	&__menu {
+.nav {
+	&__list {
+		float: left;
+		display: flex;
+		flex-direction: row;
+		list-style: none;
+		margin-left: 40px;
+	}
+
+	&__item {
+		margin-left: 26px;
+	}
+
+	&__link {
+		font-size: 17px;
 	}
 }
