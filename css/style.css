@@ -240,6 +240,10 @@ a, p {
 .button_clr_orange {
   background-color: #FF9C08;
 }
+.button_clr_black {
+  background-color: #000;
+  color: #fff;
+}
 .button_nav {
   float: right;
   font-size: 16px;
@@ -250,6 +254,7 @@ a, p {
 
 .about-us {
   background-color: #FEF9F2;
+  padding-bottom: 200px;
 }
 .about-us__list {
   padding-top: 135px;
@@ -300,4 +305,109 @@ a, p {
 .about-us__column2 {
   align-items: flex-end;
   padding-left: 26px;
+}
+
+.results {
+  padding: 200px 0;
+}
+.results__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 44px;
+}
+.results__text {
+  display: inline-block;
+}
+.results__row {
+  align-items: center;
+}
+.results__column1 {
+  padding-right: 90px;
+}
+.results__column2 {
+  align-items: flex-end;
+  padding-left: 26px;
+}
+.results__title {
+  margin-bottom: 30px;
+}
+.results__item {
+  flex-basis: 50%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+}
+.results__item-img {
+  display: inline-block;
+  width: 76px;
+  height: 76px;
+  margin-right: 16px;
+}
+.results__item-title {
+  font: 38px "Roboto";
+  font-weight: 700;
+  line-height: 44px;
+  margin-bottom: 9px;
+}
+.results__item-subtitle {
+  color: #6E6E6E;
+  line-height: 20px;
+}
+.results__img {
+  width: 584px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.footer {
+  padding: 175px 0;
+  background-color: #FEF9F2;
+}
+
+.video-block {
+  padding: 200px 0;
+  background: linear-gradient(to top, #fff 50%, #FFD4A4 50%);
+  border-bottom: 1px solid #DAD1CA;
+}
+.video-block__row {
+  flex-direction: column;
+  align-items: center;
+}
+.video-block__pretitle {
+  font-size: 20px;
+  line-height: 22px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 1.2px;
+}
+.video-block__title {
+  margin-bottom: 38px;
+  text-align: center;
+}
+.video-block__img {
+  margin-bottom: 80px;
+}
+.video-block__button {
+  margin-right: 28px;
+}
+.video-block__button:last-child {
+  margin-right: 0;
+}
+.video-block__buttons {
+  margin-bottom: 63px;
+}
+.video-block__text {
+  color: #6E6E6E;
+  font-size: 18px;
+  line-height: 30px;
+}
+.video-block__text-title {
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 34px;
+  margin-bottom: 10px;
+}
+.video-block .column:last-child {
+  padding-left: 34px;
 }
